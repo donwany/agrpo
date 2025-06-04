@@ -19,54 +19,45 @@
 We introduce a new class of reinforcement learning (**RL**) methods called **Adaptive Group Relative Policy Optimization** (**A-GRPO**), a variant of Group Relative Policy Optimization (**GRPO**) introduced by DeepSeek-R1 (rule-based reward paradigm) which is susceptible to several optimization limitations. To address these limitations, we propose a novel objective function that balances the policy update term with a symmetric $KL$-divergence penalty using hyperparameter $\beta_t$ and $\epsilon_t$ as a clipping hyperparameter. This method is adaptive by introducing the $KL$-divergence coefficient $\beta_t$ based on the moving average of $KL$ to prevent instability in optimization. We also show the critical role of encouraging more exploration (e.g., by incorporating entropy regularization with an appropriate coefficient). In essence, we introduce several key techniques consisting of: Advantage Computation, Symmetric $KL$-divergence and Hyperparameter Scheduling of our algorithm that make large-scale LLM $RL$ a success. Through experiments on benchmark tasks, we demonstrate that our method **A-GRPO** outperforms other policy gradient methods, offering a strong balance between **efficiency**, **adaptation**, **stability**, **simplicity**, and **performance**. We demonstrate, both empirically and theoretically, that the **A-GRPO** is a sensible choice for contrasting preferred and dis-preferred responses during **RL** across diverse model sizes ranging from $0.5B$ to $1.5B$ parameters. Our experiments show that **A-GRPO** can fine-tune language models (LMs) to align with human preferences as well as or better than existing methods. 
 
 ## Training Pipeline
----
+Training pipeline of the Adaptive Group Relative Policy Optimization (**A-GRPO**) Algorithm. The proposed framework generates multiple reasoning-based responses and optimizes them using symmetric $\mathcal{KL}$-divergence, with advantage estimation guided by weighted normalization of reward signals.
 <p align="center">
   <img src="./assets/a_grpo_design.drawio_v2.png" width="65%" hieght="50%" />
 </p>
 
 ---
-Training pipeline of the Adaptive Group Relative Policy Optimization (**A-GRPO**) Algorithm. The proposed framework generates multiple reasoning-based responses and optimizes them using symmetric $\mathcal{KL}$-divergence, with advantage estimation guided by weighted normalization of reward signals.
-
 
 ## Main Results
 
-## Ablation Study
+### Ablation Study
 
----
-
-
+Win Rate Comparison (**A-GRPO** vs **GRPO**). Bar chart comparing the Win Rate (\%) across different ablation configurations for **A-GRPO** and **GRPO**. **A-GRPO** consistently outperforms **GRPO** across all cases, demonstrating greater robustness and effectiveness under component removal.
 <p align="center">
   <img src="./assets/ablation_study_rewards.png" width="65%" hieght="50%" />
 </p>
 
 ---
-Win Rate Comparison (**A-GRPO** vs **GRPO**). Bar chart comparing the Win Rate (\%) across different ablation configurations for **A-GRPO** and **GRPO**. **A-GRPO** consistently outperforms **GRPO** across all cases, demonstrating greater robustness and effectiveness under component removal.
 
----
+
+Performance Comparison of **A-GRPO** and **GRPO** models across reasoning benchmarks: Comparative Accuracy of **Qwen2.5-Math-1.5B-Instruct** model across diverse reasoning benchmark datasets. Each group of bars represents performance across four benchmarks, with different models shown in distinct colors.
 <p align="center">
   <img src="./assets/performance_comparison.png" width="65%" height="50%" />
 </p>
 
 ---
-Performance Comparison of **A-GRPO** and **GRPO** models across reasoning benchmarks: Comparative Accuracy of **Qwen2.5-Math-1.5B-Instruct** model across diverse reasoning benchmark datasets. Each group of bars represents performance across four benchmarks, with different models shown in distinct colors.
 
-
----
+Radar Plot (**A-GRPO** vs **GRPO**). **A-GRPO** consistently covers more area, showing stronger performance across most configurations. The shape illustrates robustness - especially where **A-GRPO** maintains high reward under challenging ablations like **No KL** or **No Entropy**.
 <p align="center">
   <img src="./assets/radar_plot_v2.png" width="65%" height="50%" />
 </p>
 
 ---
-Radar Plot (**A-GRPO** vs **GRPO**). **A-GRPO** consistently covers more area, showing stronger performance across most configurations. The shape illustrates robustness - especially where **A-GRPO** maintains high reward under challenging ablations like **No KL** or **No Entropy**.
 
----
+Bar Plot: (**A-GRPO** Comparative Benchmark Performance of Small Language Models Across Mathematical and Coding Tasks)
 <p align="center">
   <img src="./assets/bar_model_performance_comparison_v2.png" width="65%" height="50%" />
 </p>
 
 ---
-Bar Plot: (**A-GRPO** Comparative Benchmark Performance of Small Language Models Across Mathematical and Coding Tasks)
-
 
 
 ## Ablation Study on GRPO Objective
