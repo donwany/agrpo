@@ -1,21 +1,22 @@
 # A-GRPO: Adaptive Group Relative Policy Optimization - A Multi Approach of Policy Optimization.
 
-[Theophilus Siameh](https://www.linkedin.com/in/theophilus-siameh-793a8626/), [Liu Chung-Hung](https://www.linkedin.com/in/qing-yang-b3a02120b/), [Abigail Akosua Addobea](https://www.linkedin.com/in/madam-akosua-addobea08/)
+  - **Corresponding authors:**  [Theophilus Siameh](https://www.linkedin.com/in/theophilus-siameh-793a8626/), [Liu Chung-Hung](https://www.linkedin.com/in/qing-yang-b3a02120b/), [Abigail Akosua Addobea](https://www.linkedin.com/in/madam-akosua-addobea08/)
 
-[![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)  [![arXiv](https://img.shields.io/badge/arXiv-2502.21321-b31b1b.svg)](https://arxiv.org/pdf/2502.21321)  [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/zzli2022/System2-Reasoning-LLM)[![Contribution Welcome](https://img.shields.io/badge/Contributions-welcome-blue)]()
+[![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/zzli2022/System2-Reasoning-LLM)[![Contribution Welcome](https://img.shields.io/badge/Contributions-welcome-blue)]()
+<!-- 
+[![arXiv](https://img.shields.io/badge/arXiv-2502.21321-b31b1b.svg)](https://arxiv.org/pdf/2502.21321) -->
 
 <!-- <p align="center">
 <a href="https://arxiv.org/abs/2503.22342"> <img src='https://img.shields.io/badge/arXiv-2503.22342-b31b1b.svg'></a> 
 </p> -->
 
 ## Abstract
-We introduce a new class of reinforcement learning (**RL**) methods called **Adaptive Group Relative Policy Optimization** (**A-GRPO**), a variant of Group Relative Policy Optimization (**GRPO**) introduced by DeepSeek-$R1$ (rule-based reward paradigm) which is susceptible to several optimization limitations. To address these limitations, we propose a novel objective function that balances the policy update term with a symmetric $KL$-divergence penalty using hyperparameter $\beta_t$ and $\epsilon_t$ as a clipping hyperparameter. This method is adaptive by introducing the $KL$-divergence coefficient $\beta_t$ based on the moving average of $KL$ to prevent instability in optimization. We also show the critical role of encouraging more exploration (e.g., by incorporating entropy regularization with an appropriate coefficient). In essence, we introduce several key techniques consisting of: Advantage Computation, Symmetric $KL$-divergence and Hyperparameter Scheduling of our algorithm that make large-scale LLM $RL$ a success. Through experiments on benchmark tasks, we demonstrate that our method **A-GRPO** outperforms other policy gradient methods, offering a strong balance between **efficiency**, **adaptation**, **stability**, **simplicity**, and **performance**. We demonstrate, both empirically and theoretically, that the **A-GRPO** is a sensible choice for contrasting preferred and dis-preferred responses during **RL** across diverse model sizes ranging from $0.5B$ to $1.5B$ parameters. Our experiments show that **A-GRPO** can fine-tune language models (LMs) to align with human preferences as well as or better than existing methods. 
+We introduce a new class of reinforcement learning (**RL**) methods called **Adaptive Group Relative Policy Optimization** (**A-GRPO**), a variant of Group Relative Policy Optimization (**GRPO**) introduced by DeepSeek-R1 (rule-based reward paradigm) which is susceptible to several optimization limitations. To address these limitations, we propose a novel objective function that balances the policy update term with a symmetric $KL$-divergence penalty using hyperparameter $\beta_t$ and $\epsilon_t$ as a clipping hyperparameter. This method is adaptive by introducing the $KL$-divergence coefficient $\beta_t$ based on the moving average of $KL$ to prevent instability in optimization. We also show the critical role of encouraging more exploration (e.g., by incorporating entropy regularization with an appropriate coefficient). In essence, we introduce several key techniques consisting of: Advantage Computation, Symmetric $KL$-divergence and Hyperparameter Scheduling of our algorithm that make large-scale LLM $RL$ a success. Through experiments on benchmark tasks, we demonstrate that our method **A-GRPO** outperforms other policy gradient methods, offering a strong balance between **efficiency**, **adaptation**, **stability**, **simplicity**, and **performance**. We demonstrate, both empirically and theoretically, that the **A-GRPO** is a sensible choice for contrasting preferred and dis-preferred responses during **RL** across diverse model sizes ranging from $0.5B$ to $1.5B$ parameters. Our experiments show that **A-GRPO** can fine-tune language models (LMs) to align with human preferences as well as or better than existing methods. 
 
 ## Training Pipeline
 ---
 <p align="center">
   <img src="./assets/a_grpo_design.drawio_v2.png" width="65%" hieght="50%" />
-<!--   <img src="./Images/methods.jpg" width="45%" height="50%" /> -->
 </p>
 
 ---
@@ -25,16 +26,42 @@ Training pipeline of the Adaptive Group Relative Policy Optimization (**A-GRPO**
 ## Main Results
 
 ## Ablation Study
+
 ---
+
+
 <p align="center">
   <img src="./assets/ablation_study_rewards.png" width="65%" hieght="50%" />
+</p>
+
+---
+Win Rate Comparison (**A-GRPO** vs **GRPO**). Bar chart comparing the Win Rate (\%) across different ablation configurations for **A-GRPO** and **GRPO**. **A-GRPO** consistently outperforms **GRPO** across all cases, demonstrating greater robustness and effectiveness under component removal.
+
+---
+<p align="center">
   <img src="./assets/performance_comparison.png" width="65%" height="50%" />
+</p>
+
+---
+Performance Comparison of **A-GRPO** and **GRPO** models across reasoning benchmarks: Comparative Accuracy of **Qwen2.5-Math-1.5B-Instruct** model across diverse reasoning benchmark datasets. Each group of bars represents performance across four benchmarks, with different models shown in distinct colors.
+
+
+---
+<p align="center">
   <img src="./assets/radar_plot_v2.png" width="65%" height="50%" />
+</p>
+
+---
+Radar Plot (**A-GRPO** vs **GRPO**). **A-GRPO** consistently covers more area, showing stronger performance across most configurations. The shape illustrates robustness - especially where **A-GRPO** maintains high reward under challenging ablations like **No KL** or **No Entropy**.
+
+---
+<p align="center">
   <img src="./assets/bar_model_performance_comparison_v2.png" width="65%" height="50%" />
 </p>
 
 ---
-Training pipeline of the Adaptive Group Relative Policy Optimization (**A-GRPO**) Algorithm. The proposed framework generates multiple reasoning-based responses and optimizes them using symmetric $\mathcal{KL}$-divergence, with advantage estimation guided by weighted normalization of reward signals.
+Bar Plot: (**A-GRPO** Comparative Benchmark Performance of Small Language Models Across Mathematical and Coding Tasks)
+
 
 
 ## Ablation Study on GRPO Objective
@@ -276,13 +303,16 @@ sh scripts/Eval_math.sh
 You can download the ckpt from <a href="https://huggingface.co/Stardust1956/CPPO-7b-n-16-0.75">huggingface 🤗</a>.
 
 
-## Acknowledgments
-We are very grateful to the [Open R1](https://github.com/huggingface/open-r1) teams for creating awesome repo.
+## 📚 Acknowledgments
+We are very grateful to the [Open-R1](https://github.com/huggingface/open-r1) and [trl](https://github.com/huggingface/trl.git) teams for creating awesome repo for our baseline.
+
+
+## 📌 Contributing 
 
 <br/>
 Feel free to ⭐ star and fork this repository to keep up with the latest advancements and contribute to the community.
 
-## Citation
+## 📖 Citation
 ```bibtex
 @article{siameh2025agrpo,
   title={A-GRPO: Adaptive Group Relative Policy Optimization - A Multi Approach of Policy Optimization},
