@@ -10,6 +10,11 @@
 <a href="https://arxiv.org/abs/2503.22342"> <img src='https://img.shields.io/badge/arXiv-2503.22342-b31b1b.svg'></a> 
 </p> -->
 
+
+<p align="center">
+    <img src="https://i.imgur.com/waxVImv.png" alt="">
+</p>
+
 ## Abstract
 We introduce a new class of reinforcement learning (**RL**) methods called **Adaptive Group Relative Policy Optimization** (**A-GRPO**), a variant of Group Relative Policy Optimization (**GRPO**) introduced by DeepSeek-R1 (rule-based reward paradigm) which is susceptible to several optimization limitations. To address these limitations, we propose a novel objective function that balances the policy update term with a symmetric $KL$-divergence penalty using hyperparameter $\beta_t$ and $\epsilon_t$ as a clipping hyperparameter. This method is adaptive by introducing the $KL$-divergence coefficient $\beta_t$ based on the moving average of $KL$ to prevent instability in optimization. We also show the critical role of encouraging more exploration (e.g., by incorporating entropy regularization with an appropriate coefficient). In essence, we introduce several key techniques consisting of: Advantage Computation, Symmetric $KL$-divergence and Hyperparameter Scheduling of our algorithm that make large-scale LLM $RL$ a success. Through experiments on benchmark tasks, we demonstrate that our method **A-GRPO** outperforms other policy gradient methods, offering a strong balance between **efficiency**, **adaptation**, **stability**, **simplicity**, and **performance**. We demonstrate, both empirically and theoretically, that the **A-GRPO** is a sensible choice for contrasting preferred and dis-preferred responses during **RL** across diverse model sizes ranging from $0.5B$ to $1.5B$ parameters. Our experiments show that **A-GRPO** can fine-tune language models (LMs) to align with human preferences as well as or better than existing methods. 
 
@@ -205,40 +210,31 @@ Larger group size (G) improves stability and reward across both models. A-GRPO m
 | Qwen2.5-0.5B-Instruct (GRPO)              | 0.001         | 33.8         | 29.29            | 0.014               |
 | Qwen2.5-1.5B-Instruct (GRPO)              | 0.0240        | 0.534        | 0.2576           | 0.0392              |
 | Llama-3.2-1B-Instruct (GRPO)              | 0.0083        | 0.23         | 0.2323           | 0.0159              |
-| Qwen2.5-0.5B-Instruct (AGRPO)             | 0.001         | 33.8         | 29.29            | 0.014               |
-| Qwen2.5-1.5B-Instruct (AGRPO)             | 0.0240        | 0.534        | 0.2576           | 0.0392              |
-| Llama-3.2-1B-Instruct (AGRPO)             | 0.0083        | 0.23         | 0.2323           | 0.0159              |
+| Qwen2.5-0.5B-Instruct (**A-GRPO**)             | 0.001         | 33.8         | 29.29            | 0.014               |
+| Qwen2.5-1.5B-Instruct (**A-GRPO**)             | 0.0240        | 0.534        | 0.2576           | 0.0392              |
+| Llama-3.2-1B-Instruct (**A-GRPO**)             | 0.0083        | 0.23         | 0.2323           | 0.0159              |
 |                                           |               |              |                  |                     |
 | *Distilled Models*                        |               |              |                  |                     |
-| DeepSeek-R1-Distill-Qwen-1.5B (AGRPO)     | 28.65         | 85.80        | 38.38            | 16.51               |
+| DeepSeek-R1-Distill-Qwen-1.5B (**A-GRPO**)     | 28.65         | 85.80        | 38.38            | 16.51               |
 | DeepSeek-R1-Distill-Qwen-1.5B (GRPO)      | 28.90         | 83.90        | 33.80            | 16.90               |
 
+<br/>
 
+# Installation
+To install the **A-GRPO** project, follow these steps:
 
-
-### GSM8K
-| Method                | Group Size (G) | Pruning Rate (P) | k  | Accuracy  | Training Time | Accelerate Ratio |
-|-----------------------|---------------|------------------|----|-----------|---------------|------------------|
-| Qwen2.5-1.5B-Instruct | -             | -                | -  | 55.72%    | -             | -                |
-| GRPO                 | 16            | 0.00%            | 16 | 77.05%    | 23393s        | 1.00×            |
-| CPPO                 | 16            | 50.00%           | 8  | 77.67%    | 12930s        | 1.81×            |
-| CPPO                 | 16            | 75.00%           | 4  | 78.81%    | 7159s         | 3.27×            |
-| CPPO                 | 16            | 87.50%           | 2  | 80.41%    | 4781s         | 4.89×            |
-| CPPO                 | 16            | 93.75%           | 1  | 78.20%    | 2813s         | 8.32×            |
-
-### Math & Out-of-Distribution tasks  
-
-| Method            | Group Size | Pruning Rate | k  | Accuracy | Time    | Accelerate Ratio | AMC 2023 | AIME 2024 |
-|------------------|------------|---------------|----|----------|---------|------------------|----------|-----------|
-| Qwen2.5-7B-Instruct | -          | -             | -  | 55.20%   | -       | -                | 25.62%   | 5.00%     |
-| GRPO             | 16         | 0.00%         | 16 | 75.20%   | 33902s  | 1.00×            | 46.88%   | 5.83%     |
-| CPPO             | 16         | 50.00%        | 8  | 75.20%   | 20550s  | 1.65×            | 53.12%   | 10.00%    |
-| CPPO             | 16         | 75.00%        | 4  | 77.20%   | 12959s  | 2.62×            | 49.38%   | 6.67%     |
-| CPPO             | 16         | 87.50%        | 2  | 75.20%   | 9657s   | 3.51×            | 46.25%   | 8.33%     |
-| CPPO             | 16         | 93.75%        | 1  | 72.80%   | 8375s   | 4.05×            | 45.00%   | 5.83%     |
-
-
-## To Reproduce
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/donwany/agrpo.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd agrpo
+    ```
+3. Install the required dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 ### 1. Prepare the environment:
 ```bash
