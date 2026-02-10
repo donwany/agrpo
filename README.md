@@ -308,9 +308,9 @@ Feel free to ⭐ star and fork this repository to keep up with the latest advanc
 
 ## 📖 Citation
 ```bibtex
-@article{siameh2025agrpo,
+@article{siameh2026agrpo,
   title={A-GRPO: Adaptive Group Relative Policy Optimization for Scalable and Stable Reinforcement Fine-Tuning of Large Language Models},
-  author={Siameh, Theophilus, Addobea, Akosua Abigail, Liu, Chung-Hung and Eric Kudjoe Fiah },
+  author={Siameh, Theophilus, Addobea, Akosua Abigail, Liu, Chung-Hung and Eric, Kudjoe Fiah },
   journal={},
   year={2026}
 }
