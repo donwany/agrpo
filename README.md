@@ -1,6 +1,6 @@
-# A-GRPO: Adaptive Group Relative Policy Optimization - A Multi Approach of Policy Optimization.
+# A-GRPO: Adaptive Group Relative Policy Optimization for Scalable and Stable Reinforcement Fine-Tuning of Large Language Models.
 
-  - **Corresponding authors:**  [Theophilus Siameh](https://www.linkedin.com/in/theophilus-siameh-793a8626/), [Liu Chung-Hung](https://www.linkedin.com/in/qing-yang-b3a02120b/), [Abigail Akosua Addobea](https://www.linkedin.com/in/madam-akosua-addobea08/)
+  - **Corresponding authors:**  [Theophilus Siameh](https://www.linkedin.com/in/theophilus-siameh-793a8626/), [Abigail Akosua Addobea](https://www.linkedin.com/in/madam-akosua-addobea08/), [Liu Chung-Hung](https://www.linkedin.com/in/qing-yang-b3a02120b/),[Eric Kudjoe Fiah](https://www.linkedin.com/in/eric-fiah-3815b1157/)
 
 [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/zzli2022/System2-Reasoning-LLM)[![Contribution Welcome](https://img.shields.io/badge/Contributions-welcome-blue)]()
 <!-- 
@@ -303,9 +303,9 @@ Feel free to ⭐ star and fork this repository to keep up with the latest advanc
 ## 📖 Citation
 ```bibtex
 @article{siameh2025agrpo,
-  title={A-GRPO: Adaptive Group Relative Policy Optimization - A Multi Approach of Policy Optimization},
-  author={Siameh, Theophilus and Liu, Chung-Hung and Addobea, Akosua Abigail},
-  journal={arXiv preprint arXiv:2503.22342},
-  year={2025}
+  title={A-GRPO: Adaptive Group Relative Policy Optimization for Scalable and Stable Reinforcement Fine-Tuning of Large Language Models},
+  author={Siameh, Theophilus, Addobea, Akosua Abigail, Liu, Chung-Hung and Eric Kudjoe Fiah },
+  journal={},
+  year={2026}
 }
 ```
