@@ -64,8 +64,8 @@ Comprehensive training dynamics comparison between A-GRPO and GRPO across 1,500 
 <p align="center">
   <img src="./assets/training_dynamics_comprehensive.png" width="75%" height="60%" />
 </p>
----
 
+---
 
 ## Ablation Study on GRPO Objective
 
