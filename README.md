@@ -33,7 +33,7 @@ Training pipeline of the Adaptive Group Relative Policy Optimization (**A-GRPO**
 
 Win Rate Comparison (**A-GRPO** vs **GRPO**). Bar chart comparing the Win Rate (\%) across different ablation configurations for **A-GRPO** and **GRPO**. **A-GRPO** consistently outperforms **GRPO** across all cases, demonstrating greater robustness and effectiveness under component removal.
 <p align="center">
-  <img src="./assets/ablation_study_rewards.png" width="65%" hieght="50%" />
+  <img src="./assets/ablation_study_comprehensive.png" width="65%" hieght="50%" />
 </p>
 
 ---
