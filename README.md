@@ -254,24 +254,15 @@ sh scripts/GRPO_gsm.sh
 ```
 ##### A-GRPO
 ```bash
-sh scripts/CPPO_gsm.sh
+sh scripts/AGRPO_gsm.sh
 ```
 
-
-
 #### Evaluation
-
 
 ##### Qwen2.5-1.5B-Instruct
 ```bash
 sh scripts/Eval_qwen2.5-1.5b.sh
 ```
-##### CPPO-1.5B-n-16-0.875
-```bash
-sh scripts/Eval_gsm.sh
-```
-You can download the ckpt from <a href="https://huggingface.co/Stardust1956/CPPO-1.5b-n-16-0.875">huggingface 🤗</a>.
-
 ### 4. Math:
 
 #### Training
@@ -280,22 +271,18 @@ You need **four** GPU with 80G memory to reproduce our results on Math.
 ```bash
 sh scripts/GRPO_math.sh
 ```
-##### CPPO
+##### AGRPO
 ```bash
-sh scripts/CPPO_math.sh
+sh scripts/AGRPO_math.sh
 ```
 
 #### Evaluation
-##### Qwen2.5-7B-Instruct
+##### Qwen2.5-0.5B-Instruct
 ```bash
-sh scripts/Eval_qwen2.5-7b.sh
+sh scripts/Eval_qwen2.5-0.5b.sh
 ```
-##### CPPO-7B-n-16-0.75
-```bash
-sh scripts/Eval_math.sh
-```
-You can download the ckpt from <a href="https://huggingface.co/Stardust1956/CPPO-7b-n-16-0.75">huggingface 🤗</a>.
 
+You can download the ckpt from <a href="https://huggingface.co/Stardust1956/CPPO-7b-n-16-0.75">huggingface 🤗</a>.
 
 ## 📚 Acknowledgments
 We are very grateful to the [Open-R1](https://github.com/huggingface/open-r1) and [trl](https://github.com/huggingface/trl.git) teams for creating awesome repo for our baseline.
