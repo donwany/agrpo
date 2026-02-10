@@ -48,7 +48,7 @@ Performance Comparison of **A-GRPO** and **GRPO** models across reasoning benchm
 
 Radar Plot (**A-GRPO** vs **GRPO**). **A-GRPO** consistently covers more area, showing stronger performance across most configurations. The shape illustrates robustness - especially where **A-GRPO** maintains high reward under challenging ablations like **No KL** or **No Entropy**.
 <p align="center">
-  <img src="./assets/radar_plot_v2.png" width="65%" height="50%" />
+  <img src="./assets/radar_ablation_study.png" width="65%" height="50%" />
 </p>
 
 ---
