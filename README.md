@@ -53,7 +53,7 @@ Radar Plot (**A-GRPO** vs **GRPO**). **A-GRPO** consistently covers more area, s
 
 ---
 
-Bar Plot: (**A-GRPO** Comparative Benchmark Performance of Small Language Models Across Mathematical and Coding Tasks)
+Bar Plot: Performance Comparison of **GRPO** and **A-GRPO** models across reasoning benchmarks: Comparative Accuracy of **Qwen2.5-Math-1.5B-Instruct** model across diverse reasoning benchmark datasets. Each group of bars represents performance across four benchmarks, with different models shown in distinct colors.
 <p align="center">
   <img src="./assets/performance_comparison_v3.png" width="70%" height="55%" />
 </p>
