@@ -55,7 +55,7 @@ Radar Plot (**A-GRPO** vs **GRPO**). **A-GRPO** consistently covers more area, s
 
 Bar Plot: (**A-GRPO** Comparative Benchmark Performance of Small Language Models Across Mathematical and Coding Tasks)
 <p align="center">
-  <img src="./assets/bar_model_performance_comparison_v2.png" width="65%" height="50%" />
+  <img src="./assets/performance_comparison_v3.png" width="70%" height="55%" />
 </p>
 
 ---
