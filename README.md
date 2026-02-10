@@ -58,6 +58,10 @@ Bar Plot: Performance Comparison of **GRPO** and **A-GRPO** models across reason
   <img src="./assets/performance_comparison_v3.png" width="70%" height="55%" />
 </p>
 
+Comprehensive training dynamics comparison between A-GRPO and GRPO across 1,500 training steps. (a) A-GRPO achieves 14.2% higher averaged accuracy. (b) A-GRPO reaches 28.6% higher averaged reward. (c) Training rewards show faster convergence for A-GRPO. (d) Both methods maintain controlled KL divergence, with A-GRPO showing slightly lower values. (e) A-GRPO demonstrates dramatically reduced advantage variance (73% reduction), indicating more stable training. (f) A-GRPO preserves entropy better, preventing premature convergence. The shaded regions represent variance, and annotations mark key performance milestones.
+<p align="center">
+  <img src="./assets/performance_comparison_v3.png" width="70%" height="55%" />
+</p>
 ---
 
 
