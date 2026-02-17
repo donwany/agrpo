@@ -1,6 +1,6 @@
 # A-GRPO: Adaptive Group Relative Policy Optimization for Scalable and Stable Reinforcement Fine-Tuning of Large Language Models.
 
-  - **Corresponding authors:**  [Theophilus Siameh](https://www.linkedin.com/in/theophilus-siameh-793a8626/), [Abigail Akosua Addobea](https://www.linkedin.com/in/madam-akosua-addobea08/), [Liu Chung-Hung](https://www.ece.msstate.edu/people/faculty/dr-chun-hung-liu/),[Eric Kudjoe Fiah](https://www.linkedin.com/in/eric-fiah-3815b1157/)
+  - **Corresponding authors:**  [Theophilus Siameh](https://www.linkedin.com/in/theophilus-siameh-793a8626/), [Abigail Akosua Addobea](https://www.linkedin.com/in/madam-akosua-addobea08/), [Liu Chun-Hung](https://www.ece.msstate.edu/people/faculty/dr-chun-hung-liu/),[Eric Kudjoe Fiah](https://www.linkedin.com/in/eric-fiah-3815b1157/)
 
 [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/zzli2022/System2-Reasoning-LLM)[![Contribution Welcome](https://img.shields.io/badge/Contributions-welcome-blue)]()
 <!-- 
